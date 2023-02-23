@@ -399,6 +399,7 @@ section.aboutMe div.aboutInfo {
     min-width: fit-content;
     display: flex;
     height: 100vh;
+    overflow-y: scroll;
     width: -webkit-fill-available;
     text-align: center;
     background: linear-gradient(130deg, rgb(28, 28, 28), rgb(0, 0, 0));
