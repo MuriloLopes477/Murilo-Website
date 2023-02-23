@@ -1,0 +1,686 @@
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0 0 0 0;
+}
+li {
+    list-style: none;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+.buttonSection#activeSec, .secTitle#activeSec {
+    opacity: 100%;
+    margin-top: -20px;
+    -webkit-transition: 1.25s;
+    z-index: 2;
+} 
+.buttonSection#deactiveSec, .secTitle#deactiveSec {
+    opacity: 0;
+    margin-top: 80vh;
+    -webkit-transition: 1.25s;
+
+}
+header {
+    left: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    color: blanchedalmond;
+    outline: none;
+    background-color: transparent;
+    z-index: 100000;
+    -webkit-transition: 1.5s;
+}
+header h3.name {
+    position: relative;
+    color: beige;
+    margin-top: 38px;
+    min-width: fit-content;
+    margin-left: 5%;
+    font-size: 24px;
+    width: -webkit-fill-available;
+    padding-right: 0;
+    margin-right: 36%;
+    -webkit-transition: 1.5s;
+}
+
+button.header {
+    color: beige;
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    float: right;
+    /* width: 500px; */
+    min-width: max-content;
+    margin-top: 0px;
+    margin-right: 3%;
+    -webkit-transition: 1.5s;
+}
+
+  
+
+button.header:hover, header.stickyHeader button.header:hover, header.blackStickyHeader button.header:hover {
+    font-weight: lighter;
+    cursor: pointer;
+    color: crimson;
+    -webkit-transition: 0.5s;
+}
+
+/*-------*/
+header.blackStickyHeader {
+    background-color: black;
+    -webkit-transition: 1.5s;
+}
+header.blackStickyHeader h3.name {
+    color: beige;
+    -webkit-transition: 1.5s;
+    font-size: 34px;
+    margin-right: 27%;
+    margin-top: 31px;
+}
+header.blackStickyHeader button.header {
+    color: beige;
+    font-size: 25px;
+    -webkit-transition: 1.5s;
+}
+
+
+/*--------*/
+.homeImage {
+    position: relative;
+    background: url(../images/imgWS.JPEG);
+    width: 100%;
+    margin-top: 0px;
+    height: 87.2vh;
+    background-size: cover;
+}
+
+.socialMedia {
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    -webkit-transition: 0.8s;
+}
+.socialMedia:hover {
+    height: 44px;
+    width: 44px;
+    -webkit-transition: 0.5s;
+}
+header.stickyHeader {
+    background-color: antiquewhite;
+    -webkit-transition: 1.5s;
+}
+header.stickyHeader h3.name {
+    color: black;
+    -webkit-transition: 1.5s;
+    font-size: 34px;
+    margin-right: 27%;
+    margin-top: 31px;
+}
+header.stickyHeader button.header {
+    color: black;
+    font-size: 25px;
+    /* margin-left: 0; */
+    cursor: pointer;
+    -webkit-transition: 1.5s;
+}
+header.stickyHeader img.socialMedia, header.blackStickyHeader img.socialMedia {
+    margin-top: 5px;
+    height: 50px;
+    width: 50px;
+    -webkit-transition: 0.8s;
+}
+header.stickyHeader img.socialMedia:hover, header.blackStickyHeader img.socialMedia:hover {
+    margin-top: 5px;
+    height: 54px;
+    width: 54px;
+    -webkit-transition: 0.5s;
+}
+.left, .left img {
+    position: absolute;
+    margin: 0;
+    left: 10%;
+    margin-right: 5%;
+    padding: 0;
+    height: 10vh;
+    width: 10vh;
+    background: transparent;
+    border: 0;
+}
+.right, .left {
+    top: 200px;
+}
+.right, .right img {
+    position: absolute;
+    margin: 0;
+    right: 10%;
+    margin-left: 5%;
+    padding: 0;
+    height: 10vh;
+    width: 10vh;
+    background: transparent;
+    border: 0;
+}
+.activeInfo {
+    opacity: 100%;
+    -webkit-transition: 1s;
+    height: 100%;
+    width: 100%;
+}
+div .deactiveInfo, #worldsInfo.deactiveInfo, #CAPInfo.deactiveInfo, #intInfo.deactiveInfo, #swerveInfo.deactiveInfo, #GBGInfo.deactiveInfo, #kevInfo.deactiveInfo {
+    opacity: 0%;
+    -webkit-transition: 1s;
+    height: 0;
+    margin: 0;
+    width: 0;
+}
+.active img{
+    height: 50vh;
+    width: 70vh;
+    background: linear-gradient(130deg, rgb(48, 48, 48), rgb(0, 0, 0));
+    background: transparent;
+    /* border-image-width: 20vh; */
+    /* border-color:rgb(0, 0, 0); */
+    cursor: pointer;
+    /* border-block: 10px; */
+    border: 8px solid black;
+    -webkit-transition: 1.1s;
+
+}
+.active {
+    top: 20px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    margin: 0;
+    opacity: 100%;
+    -webkit-transition: 1s;
+    z-index: 8;
+}
+section.aboutMe div.aboutInfo {
+    position: absolute;
+    opacity: 100%;
+    display: flex;
+    margin-top: 200px;
+    color: beige;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 30px;
+    -webkit-transition: 1.0s;
+}
+.buttonSection p {
+    /* display: flex; */
+    font-size: 30px;
+    margin-top: 15px;
+    /* justify-self: center; */
+    margin-left: 12vh;
+    -webkit-transition: 1.5s;
+    margin-right: 12vh;
+}
+.aboutMe h2 {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    -webkit-transition: 1.2s;
+    margin-top: 200px;
+    color: beige;
+    font-size: 40px;
+    margin-left: 90%;
+}
+.aboutMe div {
+    position: inherit;
+    opacity: 0;
+    text-align: center;
+    -webkit-transition: 1.0s;
+    margin-top: 300px;
+    color: beige;
+    font-size: 40px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+@media (max-width: 1550px) {
+    header li h3.name {
+      font-size: 18px;
+      /* margin-right: 400px; */
+      /* width: -webkit-fill-available; */
+    }
+    header li button.header {
+        font-size: 16px; 
+      }
+    header.blackStickyHeader h3.name, header.stickyHeader h3.name {
+        font-size: 28px;
+        margin-right: 18%;
+        margin-top: 38px;
+    }
+    
+    header.stickyHeader button.header, header.blackStickyHeader button.header {
+        font-size: 22px;
+    }
+  }
+  @media (max-width: 1165px) {
+    header li h3.name {
+      font-size: 16px;
+      margin-right: 18%;
+      /* margin-right: 400px; */
+      /* width: -webkit-fill-available; */
+    }
+    header li button.header {
+        font-size: 14px; 
+      }
+    header.blackStickyHeader h3.name, header.stickyHeader h3.name {
+        font-size: 24px;
+        margin-right: 16%;
+        margin-top: 38px;
+    }
+    
+    header.stickyHeader button.header, header.blackStickyHeader button.header {
+        font-size: 20px;
+    }
+    .right {
+        right: 2%;
+    } .left {
+        left: 2%;
+    }
+    .activeInfo {
+        width: 50vh;
+        height: 70vh;
+    }
+        .active img{
+        width: 60vh;
+        height: 50vh;
+    }
+  }
+  @media (max-width: 960px) {
+    header li h3.name {
+      font-size: 14px;
+      margin-right: 16%;
+      /* margin-right: 400px; */
+      /* width: -webkit-fill-available; */
+    }
+    header li button.header {
+        font-size: 12px; 
+      }
+    header.blackStickyHeader h3.name, header.stickyHeader h3.name {
+        font-size: 22px;
+        margin-right: 14%;
+        margin-top: 38px;
+    }
+    
+    header.stickyHeader button.header, header.blackStickyHeader button.header {
+        font-size: 18px;
+    }
+    .right {
+        right: 1%;
+    } .left {
+        left: 1%;
+    }
+    .activeInfo {
+        width: 45vh;
+        height: 60vh;
+    }
+        .active img{
+        width: 55vh;
+        height: 45vh;
+    }
+  }
+  @media (max-width: 860px) {
+    header li h3.name {
+      font-size: 16px;
+      margin-right: 14%;
+      /* margin-right: 400px; */
+      /* width: -webkit-fill-available; */
+    }
+    header li button.header {
+        font-size: 14px; 
+      }
+    header.blackStickyHeader h3.name, header.stickyHeader h3.name {
+        font-size: 20px;
+        margin-right: 9%;
+        margin-top: 38px;
+    }
+    
+    header.stickyHeader button.header, header.blackStickyHeader button.header {
+        font-size: 17px;
+    }
+    .right {
+        right: 1%;
+    } .left {
+        left: 1%;
+    }
+    .activeInfo {
+        width: 40vh;
+        height: 30vh;
+    }
+        .active img{
+        width: 40vh;
+        height: 30vh;
+        margin-top: 110px;
+    }
+    section.aboutMe div.aboutInfo {
+        font-size: 26px;
+    }
+  }
+.introText {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 22vh;
+    font-size: 90px;
+    color:bisque;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+}
+/*.gone {
+    position: inherit;
+    opacity: 0;
+    display: flex;
+    justify-self: center;
+    -webkit-transition: 1s;
+    margin-top: 300px;
+    color: beige;
+    font-size: 40px;
+    text-align: center;
+    margin-left: 50%;
+    margin-right: 50%;
+)*/
+
+.aboutMe {
+    position: absolute;
+    opacity: 100%;
+    min-width: fit-content;
+    display: flex;
+    height: 100vh;
+    width: -webkit-fill-available;
+    text-align: center;
+    background: linear-gradient(130deg, rgb(28, 28, 28), rgb(0, 0, 0));
+    justify-content: center;
+    -webkit-transition: 1s;
+}
+/*.aboutMe img {
+    opacity: 20%;
+    /* background-size: unset; 
+    height: 90%;
+    width: 60%;
+    position: inherit;
+    float: left;
+    margin-right: 40%;
+}*/
+section.aboutMe h2.titleAM {
+    position: absolute;
+    display: flex;
+    margin: 0;
+    margin-top: 100px;
+    opacity: 100%;
+    font-size: 75px;
+    color: beige;
+    -webkit-transition: 1.2s;
+}
+
+
+.involvements {
+    position: absolute;
+    margin-top: 97vh;
+    height: 88vh;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    background: rgb(236, 218, 191);
+    margin-right: 0;
+    -webkit-transition: 1.5s;
+}
+
+section.involvements h2.active {
+}/*
+button.sportsButton{
+    border: none;
+    background: rgb(236, 218, 191);
+    padding: none;
+    height: 8vh;
+    font-family: auto;
+    font-size: 60px;
+}
+button.sportsButton div.sports {
+    overflow-y: auto;
+    font-family: auto;
+    border-block: none;
+    flex-wrap: wrap;
+    padding: 0;
+    opacity: 100%;
+    font-size: 50px;
+    border: none;
+    background: rgb(216, 198, 171);
+    height: 60vh;
+    margin: 0;
+    width: 100%;
+    -webkit-transition: 1s ease-in-out;
+}
+button.clubsButton{
+    border: none;
+    background: rgb(210, 192, 165);
+    padding: none;
+    height: 8vh;
+    font-family: auto;
+    font-size: 60px;
+}
+button.clubsButton div.clubs{
+    overflow-y: auto;
+    font-family: auto;
+    border-block: none;
+    flex-wrap: wrap;
+    padding: 0;
+    opacity: 100%;
+    font-size: 50px;
+    border: none;
+    background: rgb(201, 183, 156);
+    height: 60vh;
+    margin: 0;
+    margin-top: 0;
+    width: 100%;
+    -webkit-transition: 1s ease-in-out;
+}
+
+button.sportsButton div , button.clubsButton div{
+    height: 0;
+    background: transparent;
+    overflow-y: auto;
+    opacity: 10%;
+    -webkit-transition: 1s ease-in-out;
+}*/
+
+
+.left:hover , .right:hover{
+    cursor: pointer;
+
+}
+
+
+.deactive, .deactive img, .deactive h5, .deactive h3 {
+    -webkit-transition: 0.5s;
+    animation: forwards;
+    opacity: 0%;
+    position: absolute;
+    /* right: 300px; */
+    right: 1000px;
+    border: none;
+    background: transparent;
+    height: 0;
+    top: 100px;
+    width: 0;
+    margin-right: 120px;
+    z-index: 9;
+}
+section.involvements h3.infoTitle {
+    font-size: 44px;
+    margin-top: 10px;
+}
+section.involvements #worldsInfo img, #intInfo img, #swerveInfo, #GBGInfo, #kevInfo {
+    height: 54vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button#exit {
+    height: 60px;
+    position: relative;
+    right: -37%;
+    top: -9%;
+    width: 60px;
+    z-index: 200;
+    margin: 0;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button#exit:hover {
+    cursor: pointer;
+}
+video {
+    height: 40vh;
+}
+section.involvements button#exit h2 {
+    font-size: 50px;
+    z-index: 11;
+    top: 0;
+}
+section.involvements h2 {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    margin-bottom: 10vh;
+    margin: 0;
+    /* margin-bottom: 100px; */
+    /* margin-right: 0; */
+    /* margin-left: 0; */
+    top: 35px;
+    text-align: center;
+    /* margin-top: 0px; */
+    opacity: 100%;
+    font-size: 75px;
+    color: rgb(28,28,28);
+    -webkit-transition: 1.2s;
+}
+section.involvements h3 {
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+    -webkit-transition: 1.2s;
+    font-family: auto;
+    margin-bottom: 0;
+}
+section.involvements h5 {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+    -webkit-transition: 1.2s;
+    font-family: auto;
+}
+.buttonSection {
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    top: 24vh;
+    /* margin-top: 95px; */
+    width: 100%;
+    /* background: rgb(236,218,191); */
+    height: 78%;
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-transition: 1.5s;
+    opacity: 100%;
+
+}
+
+
+#worldsInfo, #CAPInfo, #intInfo, #swerveInfo, #GBGInfo, #kevInfo {
+    overflow-y: scroll;
+    position: absolute;
+    z-index: 20;
+    width: 80%;
+    margin-bottom: 150px;
+    height: 700px;
+    border: 5px solid black;
+    background: #f7e4ba;
+}
+.imagedecor {
+    height: 60vh;
+    width: 50vh;
+}
+#CAPInfo p {
+    margin-bottom: 10px;
+}
+.tasks {
+    text-align: left;
+}
+.contact {
+    width: 100%;
+    height: 35vh;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    z-index: 11;
+    margin-top: 188vh;
+}
+.transition {
+    width: 100%;
+    height: 12vh;
+    background: linear-gradient(180deg, rgb(236, 218, 191), rgb(0, 0, 0));
+    position: absolute;
+    margin-top: 184vh;
+    z-index: 12;
+}
+
+.contact h2 {
+    font-size: 25px;
+    color: rgb(239 237 236);
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.contact button{
+    height: 110px;
+    width: 110px;
+    border: none;
+    background: transparent;
+    margin: 0;
+    margin-top: -89px;
+    /* justify-self: right; */
+    /* display: flex; */
+    position: absolute;
+    right: 30px;
+}
+.contact button img {
+    height: 100px;
+    /* width: 120px; */
+    width: 100px;
+    border: none;
+    margin: 0;
+    /* justify-self: right; */
+    /* display: flex; */
+    /* position: absolute; */
+    right: 20px;
+    -webkit-transition: 0.5s;
+}
+.contact button img:hover{
+    height: 110px;
+    width: 110px;
+    /* justify-self: right; */
+    /* display: flex; */
+    -webkit-transition: 0.5s;
+}
+
+
+
+
